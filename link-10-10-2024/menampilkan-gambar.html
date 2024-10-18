@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <head>
+        <title>Gambar di HTML</title>
+    </head>
+    <body>
+        <h1>Menampilkan Gambar di HTML</h1>
+        <p>
+            Gambar gedung Universitas Insan Pembangunan
+        </p>
+        <p>
+            <img src="gedung_ip.jpg" />
+        </p>
+        <p>
+            Gambar logo STIE Insan Pembangunan
+        </p>
+        <p>
+            <img src="https://www.datadikti.com/images/uploads/959/959.png" width="300" height="300" />
+        </p>
+        <p>Ini adalah gambar gedung kampus Insan Pembangunan dengan width dan height:</p>
+        <p>
+            <img src="gedung_ip.jpg" width="200" height="150" alt="Kampus IP"/>
+            <!--Atribut alt adalah atribut untuk memberikan teks alternatif pada gambar saat gambargagal ditampilkan.-->
+            <img src="gedung_ip.jpg" width="150" height="100" alt="Kampus IP"/>
+            <img src="gedung_ip.jpg" width="50" height="50" alt="Kampus IP"/>
+        </p>
+        <p>Ini adalah contoh gambar gedung kampus Insan Pembangunan menggunakan Atribut style:</p>
+        <p>
+            <img src="gedung_ip.jpg" style="width: 150px; border: 3px solid blue;" />
+            <img src="gedung_ip.jpg" style="width: 150px; border-radius: 10px;" />
+            <img src="gedung_ip.jpg" style="width: 150px; height: 150px;border-radius: 100%;" />
+
+            <!--Gambar pertama diberi style garis (border) dengan ukuran 3px, jenis solid, dan warnanya adalah
+            biru.
+            Lalu gambar kedua, diberi style border-radius untuk menciptkan lengkungan pada pojok
+            gambar.
+            Pada gambar ketiga, diberi nilai 100% pada border-radius yang akan menciptkan lingkaran.-->
+        </p>
+        <h1>Gambar Sebagai Link</h1>
+        <p>Contoh gambar sebagai link:</p>
+        <p>
+            <a href="https://unipem.ac.id/">
+                <img src="gedung_ip.jpg" width="160"/>
+            </a>
+        </p>
+        <!--Membuat Link dengan Gambar
+        Cara membuat link dengan gambar adalah dengan menggabungkan tag <a> dan
+        tag <img>. Tag <a> harus mengapit tag <img>.-->
+
+            <h1>Menampilkan Gambar di HTML</h1>
+            <p>Berikut ini contoh gambar menggunakan figure:</p>
+            <p>
+                <figure>
+                    <img src="pantai.jpg" width="300"/>
+                    <figcaption>pemandangan pantai anyer</figcaption>
+                </figure>
+                <!--Tag <figure>
+                Tag figure berfungsi untuk membungkus tag <img> atau gambar dengan teks caption.
+                Teks caption adalah teks yang menjelaskan tentang gambar. Teks caption bisa dibuat
+                dengan tag <figcaption>.-->
+            </p>
+
+
+            <p>Berikut ini contoh gambar menggunakan picture:</p>
+            <p>
+                <picture>
+                    <source media="(min-width: 650px)" srcset="gedung_ip.jpg">
+                    <source media="(min-width: 450px)" srcset="pantai.jpg">
+                    <img src="gedung_ip.jpg">
+                </picture>
+            </p>
+            <!--Tag <picture>
+            Di era mobile seperti saat ini, website tidak hanya dibuka melalui komputer saja, tapi
+            juga smartphone.
+            Ukuran layar komputer dengan smartphone tentunya berbeda. Karena itu, website
+            harus bersifat responsif agar bisa menyesuaikan diri dengan media yang digunakan.
+            Nah, tag <picture> hadir untuk mengatasi masalah ini. Tag ini berfungsi untuk
+            menentukan gambar mana yang akan ditampilkan pada ukuran layar tertentu.-->
+    </body>
+</html>
