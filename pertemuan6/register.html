@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Mahasiswa UNIPI</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Function to show the success message and store submission state
+        function showSuccessMessage(event) {
+            event.preventDefault();
+            document.getElementById("success-popup").style.display = "flex";
+            sessionStorage.setItem("formSubmitted", "true"); // Set form submission state
+        }
+
+        // Function to close the popup and clear session storage
+        function closePopup() {
+            document.getElementById("success-popup").style.display = "none";
+            sessionStorage.removeItem("formSubmitted"); // Reset form submission state on close
+        }
+
+        // Check if form was submitted before refresh and only show popup if it was manually submitted
+        window.onload = function() {
+            if (sessionStorage.getItem("formSubmitted") === "true") {
+                document.getElementById("success-popup").style.display = "flex";
+            } else {
+                document.getElementById("success-popup").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pendaftaran Mahasiswa Baru UNIPI</h1>
+            <p>Silakan isi formulir di bawah ini untuk mendaftar sebagai mahasiswa baru Universitas Insan Pembangunan.</p>
+        </header>
+
+        <section class="register-form">
+            <form onsubmit="showSuccessMessage(event)">
+                <div class="input-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan Nama Lengkap" required>
+                </div>
+                <div class="input-group">
+                    <label for="birthplace">Tempat Lahir</label>
+                    <input type="text" id="birthplace" name="birthplace" placeholder="Masukkan Tempat Lahir" required>
+                </div>
+                <div class="input-group">
+                    <label for="birthdate">Tanggal Lahir</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Masukkan Password" required>
+                </div>
+                <div class="input-group">
+                    <label for="jurusan">Jurusan</label>
+                    <select id="jurusan" name="jurusan" required>
+                        <option value="">Pilih Jurusan</option>
+                        <option value="Teknologi Informasi">Teknologi Informasi</option>
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="semester">Semester</label>
+                    <select id="semester" name="semester" required>
+                        <option value="">Pilih Semester</option>
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Daftar Sekarang</button>
+            </form>
+
+            <p class="login-link">Sudah punya akun? <a href="login.html">Login di sini</a></p>
+            <p class="dashboard-link"><a href="indexpertemuan6.html">Kembali ke Dashboard</a></p>
+        </section>
+
+        <!-- Pop-up Success Message -->
+        <div id="success-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h2>Registrasi Berhasil!</h2>
+                <p>Terima kasih telah mendaftar. Silakan login menggunakan akun Anda.</p>
+                <button class="btn" onclick="closePopup()">Tutup</button>
+            </div>
+        </div>
+
+        <footer>
+            <hr>
+            <p>© 2024 Universitas Insan Pembangunan | Teknologi Informasi 1</p>
+        </footer>
+    </div>
+</body>
+</html>

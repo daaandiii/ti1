@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Mahasiswa UNIPI</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showSuccessMessage(event) {
+            event.preventDefault();
+            document.getElementById("success-message").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Login Mahasiswa UNIPI</h1>
+            <p>Silakan login dengan NPM dan password Anda</p>
+        </header>
+
+        <section class="login-form">
+            <form onsubmit="showSuccessMessage(event)">
+                <div class="input-group">
+                    <label for="npm">NPM</label>
+                    <input type="text" id="npm" name="npm" placeholder="Masukkan NPM" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Masukkan Password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p id="success-message" class="success-message">Login Berhasil!</p>
+            <p class="register-link">Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+            <p class="dashboard-link"><a href="indexpertemuan6.html">Kembali ke Dashboard</a></p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>© 2024 Universitas Insan Pembangunan | Teknologi Informasi 1</p>
+        </footer>
+    </div>
+</body>
+</html>
