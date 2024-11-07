@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Reservasi Cantika Hotel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cantika Hotel</h1>
+        <h2>Reservasi Kamar</h2>
+        <nav class="navigation">
+            <a href="buat_form.html">Buat Form</a>
+            <a href="buat_list.html">Buat List</a>
+            <a href="buat_tabel.html">Buat Tabel</a>
+        </nav>
+        <form action="#" method="post">
+            <label for="no_identitas">No. Identitas:</label><br>
+            <input type="text" id="no_identitas" name="no_identitas" required><br>
+
+            <label for="nama_penyewa">Nama:</label><br>
+            <input type="text" id="nama_penyewa" name="nama_penyewa" required><br>
+
+            <label for="no_hp">No Hp:</label><br>
+            <input type="tel" id="no_hp" name="no_hp" required><br>
+
+            <label for="kamar">Kamar:</label><br>
+            <select id="kamar" name="kamar">
+                <option value="standard">Standard Room</option>
+                <option value="superior">Superior Room</option>
+                <option value="deluxe">Deluxe Room</option>
+                <option value="suite">Suite Room</option>
+            </select><br>
+
+            <label>Layanan:</label><br>
+            <input type="radio" id="tanpa_breakfast" name="layanan" value="tanpa_breakfast" checked>
+            <label for="tanpa_breakfast">Tanpa Breakfast</label><br>
+            <input type="radio" id="dengan_breakfast" name="layanan" value="dengan_breakfast">
+            <label for="dengan_breakfast">Dengan Breakfast</label><br><br>
+
+            <label for="lama_menginap">Lama Menginap:</label><br>
+            <input type="number" id="lama_menginap" name="lama_menginap" min="1" required> hari<br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Batal">
+        </form>
+    </div>
+</body>
+</html>
