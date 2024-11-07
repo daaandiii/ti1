@@ -1,0 +1,293 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mengatur gaya dasar untuk halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Mengatur kontainer utama di tengah */
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk header */
+h1 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk link navigasi */
+.navigation a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+    padding: 0 10px;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #2e7d32;
+}
+
+/* Gaya untuk garis pemisah */
+hr {
+    border: 0;
+    border-top: 2px solid #4CAF50;
+    margin: 20px 0;
+}
+
+/* Gaya untuk daftar jurusan */
+.faculty-list {
+    text-align: left;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.faculty-list li {
+    margin: 10px 0;
+}
+
+.faculty-list ul {
+    padding-left: 20px;
+}
+
+.faculty-list ul li {
+    list-style-type: circle;
+    margin: 5px 0;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
+/* Mengatur tampilan dasar untuk halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Mengatur kontainer utama */
+.container {
+    text-align: center;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk header dan subheader */
+h1 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+header p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk form */
+.register-form {
+    text-align: left;
+    padding: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Gaya untuk input, select, dan textarea */
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group input[type="date"],
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+/* Gaya untuk tombol radio */
+.input-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.input-group div {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Gaya untuk tombol submit */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Gaya garis pemisah */
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* Mengatur tampilan dasar untuk halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Mengatur kontainer utama di tengah */
+.container {
+    text-align: center;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk header utama */
+h1 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk profil */
+.profile {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.profile p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Gaya untuk navigasi */
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #c8e6c9;
+}
+
+
+
+
+
+
+
+
+

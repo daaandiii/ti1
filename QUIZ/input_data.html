@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pendaftaran Mahasiswa Baru UNIPI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Datang</h1>
+
+        <p class="navigation">
+            <a href="list_data.html">List Data</a> |
+            <a href="input_data.html">Input Data</a> |
+            <a href="tabel_data.html">Tabel Data</a> |
+            <a href="index.html">Beranda</a>
+        </p>
+        <hr>
+        <header>
+            <h1>Pendaftaran Mahasiswa Baru UNIPI</h1>
+            <p>Silakan isi formulir di bawah ini untuk mendaftar sebagai mahasiswa baru Universitas Insan Pembangunan.</p>
+        </header>
+
+        <section class="register-form">
+            <form onsubmit="showSuccessMessage(event)">
+                <div class="input-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan Nama Lengkap" required>
+                </div>
+                <div class="input-group">
+                    <label for="birthplace">Tempat Lahir</label>
+                    <input type="text" id="birthplace" name="birthplace" placeholder="Masukkan Tempat Lahir" required>
+                </div>
+                <div class="input-group">
+                    <label for="birthdate">Tanggal Lahir</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Masukkan Password" required>
+                </div>
+                <div class="input-group">
+                    <label for="jurusan">Jurusan</label>
+                    <select id="jurusan" name="jurusan" required>
+                        <option value="">Pilih Jurusan</option>
+                        <option value="Teknologi Informasi">Teknologi Informasi</option>
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="alamat">Alamat</label>
+                    <textarea id="alamat" name="alamat" placeholder="Masukkan Alamat Lengkap" rows="4" required></textarea>
+                </div>
+                <div class="input-group">
+                    <label>Jenis Kelamin</label>
+                    <div>
+                        <input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki" required>
+                        <label for="laki-laki">Laki-laki</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" required>
+                        <label for="perempuan">Perempuan</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="semester">Semester</label>
+                    <select id="semester" name="semester" required>
+                        <option value="">Pilih Semester</option>
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Daftar Sekarang</button>
+            </form>
+        </section>
+        <hr>
+    </div>
+</body>
+</html>
