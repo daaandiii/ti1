@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program JavaScript - Tugas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .container {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>1. Program Menghitung Luas Segitiga</h2>
+        <button onclick="hitungLuasSegitiga()">Hitung Luas Segitiga</button>
+    </div>
+
+    <div class="container">
+        <h2>2. Kalkulator Sederhana</h2>
+        <button onclick="kalkulator()">Buka Kalkulator</button>
+    </div>
+
+    <script>
+        function hitungLuasSegitiga() {
+            // Mengambil input dari user
+            let alas = parseFloat(prompt("Masukkan panjang alas segitiga (cm):"));
+            
+            // Validasi input alas
+            if (isNaN(alas) || alas <= 0) {
+                alert("Mohon masukkan angka yang valid untuk alas!");
+                return;
+            }
+            
+            let tinggi = parseFloat(prompt("Masukkan tinggi segitiga (cm):"));
+            
+            // Validasi input tinggi
+            if (isNaN(tinggi) || tinggi <= 0) {
+                alert("Mohon masukkan angka yang valid untuk tinggi!");
+                return;
+            }
+            
+            // Menghitung luas
+            let luas = 0.5 * alas * tinggi;
+            
+            // Menampilkan hasil
+            alert("Luas segitiga adalah: " + luas.toFixed(2) + " cm²");
+        }
+
+        function kalkulator() {
+            // Mengambil input dari user
+            let angka1 = parseFloat(prompt("Masukkan angka pertama:"));
+            
+            // Validasi input angka pertama
+            if (isNaN(angka1)) {
+                alert("Mohon masukkan angka yang valid!");
+                return;
+            }
+            
+            let operator = prompt("Masukkan operator (+, -, *, /):");
+            
+            // Validasi operator
+            if (!['+', '-', '*', '/'].includes(operator)) {
+                alert("Operator tidak valid! Gunakan +, -, *, atau /");
+                return;
+            }
+            
+            let angka2 = parseFloat(prompt("Masukkan angka kedua:"));
+            
+            // Validasi input angka kedua
+            if (isNaN(angka2)) {
+                alert("Mohon masukkan angka yang valid!");
+                return;
+            }
+            
+            // Validasi pembagian dengan nol
+            if (operator === '/' && angka2 === 0) {
+                alert("Tidak bisa melakukan pembagian dengan nol!");
+                return;
+            }
+            
+            let hasil;
+            
+            // Melakukan perhitungan sesuai operator
+            switch(operator) {
+                case '+':
+                    hasil = angka1 + angka2;
+                    break;
+                case '-':
+                    hasil = angka1 - angka2;
+                    break;
+                case '*':
+                    hasil = angka1 * angka2;
+                    break;
+                case '/':
+                    hasil = angka1 / angka2;
+                    break;
+            }
+            
+            // Menampilkan hasil
+            alert("Hasil: " + angka1 + " " + operator + " " + angka2 + " = " + hasil.toFixed(2));
+        }
+    </script>
+</body>
+</html>
