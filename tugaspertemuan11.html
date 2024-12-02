@@ -48,7 +48,7 @@
     <script>
         function hitungLuasSegitiga() {
             // Mengambil input dari user
-            let alas = parseFloat(prompt("Masukkan panjang alas segitiga (cm):"));
+            let alas = parseFloat(prompt("Masukkan panjang alas segitiga (dalam cm):"));
             
             // Validasi input alas
             if (isNaN(alas) || alas <= 0) {
@@ -56,7 +56,7 @@
                 return;
             }
             
-            let tinggi = parseFloat(prompt("Masukkan tinggi segitiga (cm):"));
+            let tinggi = parseFloat(prompt("Masukkan tinggi segitiga (dalam cm):"));
             
             // Validasi input tinggi
             if (isNaN(tinggi) || tinggi <= 0) {
@@ -81,7 +81,7 @@
                 return;
             }
             
-            let operator = prompt("Masukkan operator (+, -, *, /):");
+            let operator = prompt("Masukkan operator perhitungan:\n\n+ untuk penjumlahan\n- untuk pengurangan\n* untuk perkalian\n/ untuk pembagian");
             
             // Validasi operator
             if (!['+', '-', '*', '/'].includes(operator)) {
@@ -121,8 +121,15 @@
                     break;
             }
             
-            // Menampilkan hasil
-            alert("Hasil: " + angka1 + " " + operator + " " + angka2 + " = " + hasil.toFixed(2));
+            // Menampilkan hasil dengan operator yang lebih deskriptif
+            let operatorText = {
+                '+': 'ditambah',
+                '-': 'dikurang',
+                '*': 'dikali',
+                '/': 'dibagi'
+            }[operator];
+            
+            alert(`Hasil: ${angka1} ${operatorText} ${angka2} = ${hasil.toFixed(2)}`);
         }
     </script>
 </body>
