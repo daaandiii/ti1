@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDC ACSWINETO</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, rgba(46, 113, 42, 0.8), rgba(213, 254, 119, 0.8));
+            color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .background-stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ffffff;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkle 3s infinite alternate ease-in-out;
+        }
+        .star:nth-child(odd) {
+            animation-duration: 4s;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.6; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffffff; /* Changed to white for better contrast */
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: rgba(0, 171, 107, 0.5); /* Reduced opacity for transparency */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adjusted shadow for transparency */
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            backdrop-filter: blur(5px);
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .card:hover img {
+            transform: scale(1.05);
+        }
+        .card h2 {
+            margin: 0;
+            padding: 12px;
+            background: rgba(57, 240, 119, 0.8); /* Slightly transparent background */
+            color: #000;
+            font-size: 1.25rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .card h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background: rgba(0, 201, 167, 0.8); /* Slightly transparent */
+            margin: 8px auto 0;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        .card:hover h2::after {
+            width: 80px;
+        }
+        .back-link {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .back-link a {
+            display: inline-block;
+            color: #ffffff; /* Changed to white for better contrast */
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: 2px solid #ffffff; /* Changed to white for better contrast */
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-link a:hover {
+            background: rgba(0, 171, 107, 0.7);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>
+        // Generating stars for the background
+        document.addEventListener('DOMContentLoaded', () => {
+            const starContainer = document.querySelector('.background-stars');
+            const starCount = 100;
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.left = `${Math.random() * 100}%`;
+                starContainer.appendChild(star);
+            }
+        });
+
+        setTimeout(function() {
+            window.location.reload(1);
+        }, 300000); // 300000 milliseconds = 5 minutes
+    </script>
+</head>
+<body>
+    <div class="background-stars"></div>
+    <div class="container">
+        <h1>IDC ACSWINETO</h1>
+        <div class="back-link">
+            <a href="mitra.html">BACK</a>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h2>CPU</h2>
+                <img src="http://idc.acswineto.my.id:24242/graphs/cpu/daily.gif" alt="CPU">
+            </div>
+            <div class="card">
+                <h2>SFP+1</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/sfp-sfpplus1-nx40-e1%2F14/daily.gif" alt="SFP+1">
+            </div>
+            <div class="card">
+                <h2>SFP+2</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/sfp%2Dsfpplus2%2Dnx40%2De1%2F5/daily.gif" alt="SFP+2">
+            </div>
+            <div class="card">
+                <h2>R1 MIXED</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/70.GMDP.IN/daily.gif" alt="R1 MIXED">
+            </div>
+            <div class="card">
+                <h2>RIZKI METRO GMDP</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/277.ACS-Rizki/daily.gif" alt="RIZKI METRO GMDP">
+            </div>
+            <div class="card">
+                <h2>IFORTE CIBADAK</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/vlan1556-IFORTE-Cibadak/daily.gif" alt="IFORTE CIBADAK">
+            </div>
+            <div class="card">
+                <h2>LACP</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/LACP.Bonding/daily.gif" alt="LACP">
+            </div>
+            <div class="card">
+                <h2>METRO-E TGR</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/2779-MVNET/daily.gif" alt="METRO-E TGR">
+            </div>
+            <div class="card">
+                <h2>METRO IFORTE BALARAJA</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/vlan1814.Iforte.220223.Balaraja/daily.gif" alt="METRO IFORTE BALARAJA">
+            </div>
+            <div class="card">
+                <h2>Jarindo-PWT SAWO</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/vlan847-Jarindo/daily.gif" alt="Jarindo-PWT SAWO">
+            </div>
+            <div class="card">
+                <h2>FMI</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/vlan2780%2DFMI/daily.gif" alt="FMI">
+            </div>
+            <div class="card">
+                <h2>MVNET Galeong</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/vlan2219-JarindoGaleong/daily.gif" alt="MVNET Galeong">
+            </div>
+            <div class="card">
+                <h2>IFORTE CISOKA</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/1387.IFORTE.CISOKA/daily.gif" alt="IFORTE CISOKA">
+            </div>
+            <div class="card">
+                <h2>PGAS SUKANAGARA</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/vlan2585%2DPGAS%2DSUKANEGARA/daily.gif" alt="PGAS SUKANAGARA">
+            </div>
+            <div class="card">
+                <h2>METRO PGAS BITUNG</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/vlan2565-PGAS/daily.gif" alt="METRO PGAS BITUNG">
+            </div>
+            <div class="card">
+                <h2>INDOSAT LAMPUNG</h2>
+                <img src="http://103.124.136.205:24242/graphs/iface/1793.Indosat.Lampung/daily.gif" alt="INDOSAT LAMPUNG">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
